@@ -63,10 +63,11 @@ class PojSpider(Spider):
         sel=Selector(response)
         tags=sel.xpath('//div[@class="ptx"]')
         #content_list=tags[0].xpath("text()").extract()
-        content_list=[tag.xpath("text()").extract() for tag in tags]
+        content_list=[''.join(tag.xpath("text()").extract()) for tag in tags]
         print type(content_list)
+        print 'content_list:',content_list
        # print 'content_list:',content_list
-       # content="".join(content_list)
+        content="".join(content_list)
         item=response.meta['item']
-        item['content']=content_list
+        item['content']=content
         return item

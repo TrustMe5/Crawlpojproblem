@@ -13,5 +13,11 @@ class PojItem(scrapy.Item):
     # name = scrapy.Field()
     title=scrapy.Field()
     link=scrapy.Field()
-    content=scrapy.Field()
+    Time_Limit=scrapy.Field()
+    Memory_Limit=scrapy.Field()
+    Description=scrapy.Field()
+    Input=scrapy.Field()
+    Output=scrapy.Field()
+    Sample_Input=scrapy.Field()
+    Sample_Output=scrapy.Field()
     pass

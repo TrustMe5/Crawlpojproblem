@@ -9,7 +9,6 @@ from scrapy.selector import Selector
 class PojSpider(Spider):
     name='poj'
     allowed_domains=['poj.org']
-    download_delay=0.1
     start_urls=['http://poj.org/problemlist?volume=1']
    # def start_requests(self):
    #     headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36'}
@@ -38,9 +37,11 @@ class PojSpider(Spider):
     def parse(self,response):
         sel=Selector(response)
         sites=sel.xpath('//tr[@align="center"]/td[@align="left"]/a')
+        print '*'*10
+        print 'len(sites):',len(sites)
         for site in sites:
             item=PojItem()
-            item['title']=site.xpath("text()").extract()
+            item['title']=site.xpath("text()").extract()[0]
             item['link']=site.xpath("@href").extract()
             next_url="http://poj.org/"+item['link'][0]
             item['link']=next_url
@@ -60,14 +61,43 @@ class PojSpider(Spider):
    #     return item
 
     def parse2(self,response):
+        print response.body
         sel=Selector(response)
-        tags=sel.xpath('//div[@class="ptx"]')
-        #content_list=tags[0].xpath("text()").extract()
-        content_list=[''.join(tag.xpath("text()").extract()) for tag in tags]
-        print type(content_list)
-        print 'content_list:',content_list
-       # print 'content_list:',content_list
-        content="".join(content_list)
+        Time_Limit=sel.xpath('//div[@class="plm"]/table/tr[1]/td[1]/text()').extract()[0]
+       # Time_Limit=Time_Limit.xpath("text()").extract()[0]
+        
+        print "length of Time_Limit:",len(Time_Limit)
+        Memory_Limit=sel.xpath('//div[@class="plm"]/table/tr[1]/td[3]/text()').extract()[0]
+        print 'len(Memory_Limit)',len(Memory_Limit)
+        DescriptionTag=sel.xpath('//div[@class="ptx"][1]')
+        print '!'*20
+        print 'length of Des:',len(DescriptionTag)
+        Description=DescriptionTag.xpath('string(.)').extract()[0]
+        InputTag=sel.xpath('//div[@class="ptx"][2]')
+        Input=InputTag.xpath('string(.)').extract()[0]
+        OutputTag=sel.xpath('//div[@class="ptx"]')
+        if  OutputTag:
+            print "*"*20
+            print "length of OutputTag:",len(OutputTag)
+
+        if OutputTag[2].xpath('string(.)').extract():
+            Output=OutputTag[2].xpath('string(.)').extract()[0]
+        else:
+            Output='There is nothing!'
+        Sample_InputTag=sel.xpath('//pre[@class="sio"][1]')
+        Sample_Input=Sample_InputTag.xpath('string(.)').extract()[0]
+        Sample_OutputTag=sel.xpath('//pre[@class="sio"][2]')
+        Sample_Output=Sample_OutputTag.xpath('string(.)').extract()[0]
+
+        print 'length of Sample_InputTag:',len(Sample_InputTag)
         item=response.meta['item']
-        item['content']=content
+        item['Time_Limit']=Time_Limit
+        item['Memory_Limit']=Memory_Limit
+        item['Description']=Description
+        item['Input']=Input
+        item['Output']=Output
+
+        item['Sample_Input']=Sample_Input
+
+        item['Sample_Output']=Sample_Output
         return item

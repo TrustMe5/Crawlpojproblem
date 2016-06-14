@@ -64,30 +64,27 @@ class PojSpider(Spider):
         print response.body
         sel=Selector(response)
         Time_Limit=sel.xpath('//div[@class="plm"]/table/tr[1]/td[1]/text()').extract()[0]
-       # Time_Limit=Time_Limit.xpath("text()").extract()[0]
         
         print "length of Time_Limit:",len(Time_Limit)
         Memory_Limit=sel.xpath('//div[@class="plm"]/table/tr[1]/td[3]/text()').extract()[0]
         print 'len(Memory_Limit)',len(Memory_Limit)
-        DescriptionTag=sel.xpath('//div[@class="ptx"][1]')
+        
+        DescriptionTag=sel.xpath('//div[@class="ptx"]')
         print '!'*20
         print 'length of Des:',len(DescriptionTag)
-        Description=DescriptionTag.xpath('string(.)').extract()[0]
-        InputTag=sel.xpath('//div[@class="ptx"][2]')
-        Input=InputTag.xpath('string(.)').extract()[0]
-        OutputTag=sel.xpath('//div[@class="ptx"]')
-        if  OutputTag:
-            print "*"*20
-            print "length of OutputTag:",len(OutputTag)
+        Description=DescriptionTag[0].xpath('string(.)').extract()[0]
 
-        if OutputTag[2].xpath('string(.)').extract():
-            Output=OutputTag[2].xpath('string(.)').extract()[0]
-        else:
-            Output='There is nothing!'
-        Sample_InputTag=sel.xpath('//pre[@class="sio"][1]')
-        Sample_Input=Sample_InputTag.xpath('string(.)').extract()[0]
-        Sample_OutputTag=sel.xpath('//pre[@class="sio"][2]')
-        Sample_Output=Sample_OutputTag.xpath('string(.)').extract()[0]
+        InputTag=sel.xpath('//div[@class="ptx"]')
+        Input=InputTag[1].xpath('string(.)').extract()[0]
+        
+        OutputTag=sel.xpath('//div[@class="ptx"]')
+        Output=OutputTag[2].xpath('string(.)').extract()[0]
+        
+        Sample_InputTag=sel.xpath('//pre[@class="sio"]')
+        Sample_Input=Sample_InputTag[0].xpath('string(.)').extract()[0]
+        
+        Sample_OutputTag=sel.xpath('//pre[@class="sio"]')
+        Sample_Output=Sample_OutputTag[1].xpath('string(.)').extract()[0]
 
         print 'length of Sample_InputTag:',len(Sample_InputTag)
         item=response.meta['item']

@@ -1,52 +1,19 @@
-Hangover,http://poj.org/problem?id=1003, 1000MS, 10000K,"How far can you make a stack of cards overhang a table? If you have one card, you can create a maximum overhang of half a card length. (We're assuming that the cards must be perpendicular to the table.) With two cards you can make the top card overhang the bottom one by half a card length, and the bottom one overhang the table by a third of a card length, for a total maximum overhang of 1/2 + 1/3 = 5/6 card lengths. In general you can make n cards overhang by 1/2 + 1/3 + 1/4 + ... + 1/(n + 1) card lengths, where the top card overhangs the second by 1/2, the second overhangs tha third by 1/3, the third overhangs the fourth by 1/4, etc., and the bottom card overhangs the table by 1/(n + 1). This is illustrated in the figure below.","The input consists of one or more test cases, followed by a line containing the number 0.00 that signals the end of the input. Each test case is a single line containing a positive floating-point number c whose value is at least 0.01 and at most 5.20; c will contain exactly three digits.","For each test case, output the minimum number of cards necessary to achieve an overhang of at least c card lengths. Use the exact output format shown in the examples.","1.00
-3.71
-0.04
-5.19
-0.00
-","3 card(s)
-61 card(s)
-1 card(s)
-273 card(s)"
-487-3279,http://poj.org/problem?id=1002, 2000MS, 65536K,"Businesses like to have memorable telephone numbers. One way to make a telephone number memorable is to have it spell a memorable word or phrase. For example, you can call the University of Waterloo by dialing the memorable TUT-GLOP. Sometimes only part of the number is used to spell a word. When you get back to your hotel tonight you can order a pizza from Gino's by dialing 310-GINO. Another way to make a telephone number memorable is to group the digits in a memorable way. You could order your pizza from Pizza Hut by calling their ``three tens'' number 3-10-10-10.The standard form of a telephone number is seven decimal digits with a hyphen between the third and fourth digits (e.g. 888-1200). The keypad of a phone supplies the mapping of letters to numbers, as follows:A, B, and C map to 2D, E, and F map to 3G, H, and I map to 4J, K, and L map to 5M, N, and O map to 6P, R, and S map to 7T, U, and V map to 8W, X, and Y map to 9There is no mapping for Q or Z. Hyphens are not dialed, and can be added and removed as necessary. The standard form of TUT-GLOP is 888-4567, the standard form of 310-GINO is 310-4466, and the standard form of 3-10-10-10 is 310-1010.Two telephone numbers are equivalent if they have the same standard form. (They dial the same number.)Your company is compiling a directory of telephone numbers from local businesses. As part of the quality control process you want to check that no two (or more) businesses in the directory have the same telephone number.","The input will consist of one case. The first line of the input specifies the number of telephone numbers in the directory (up to 100,000) as a positive integer alone on the line. The remaining lines list the telephone numbers in the directory, with each number alone on a line. Each telephone number consists of a string composed of decimal digits, uppercase letters (excluding Q and Z) and hyphens. Exactly seven of the characters in the string will be digits or letters.","Generate a line of output for each telephone number that appears more than once in any form. The line should give the telephone number in standard form, followed by a space, followed by the number of times the telephone number appears in the directory. Arrange the output lines by telephone number in ascending lexicographical order. If there are no duplicates in the input print the line:No duplicates.","12
-4873279
-ITS-EASY
-888-4567
-3-10-10-10
-888-GLOP
-TUT-GLOP
-967-11-11
-310-GINO
-F101010
-888-1200
--4-8-7-3-2-7-9-
-487-3279
-","310-1010 2
-487-3279 4
-888-4567 3"
-Exponentiation,http://poj.org/problem?id=1001, 500MS, 10000K,"Problems involving the computation of exact values of very large magnitude and precision are common. For example, the computation of the national debt is a taxing experience for many computer systems. This problem requires that you write a program to compute the exact value of Rn where R is a real number ( 0.0 InputThe input will consist of a set of pairs of values for R and n. The R value will occupy columns 1 through 6, and the n value will be in columns 8 and 9.OutputThe output will consist of one line for each line of input giving the exact value of R^n. Leading zeros should be suppressed in the output. Insignificant trailing zeros must not be printed. Don't print the decimal point if the result is an integer.Sample Input95.123 12
-0.4321 20
-5.1234 15
-6.7592  9
-98.999 10
-1.0100 12
-Sample Output548815620517731830194541.899025343415715973535967221869852721
-.00000005148554641076956121994511276767154838481760200726351203835429763013462401
-43992025569.928573701266488041146654993318703707511666295476720493953024
-29448126.764121021618164430206909037173276672
-90429072743629540498.107596019456651774561044010001
-1.126825030131969720661201HintIf you don't know how to determine wheather encounted the end of input:s is a string and n is an integerC++while(cin>>s>>n){...}cwhile(scanf(""%s%d"",s,&n)==2) //to  see if the scanf read in as many items as you want/*while(scanf(%s%d"",s,&n)!=EOF) //this also work    */{...}SourceEast Central North America 1988",The output will consist of one line for each line of input giving the exact value of R^n. Leading zeros should be suppressed in the output. Insignificant trailing zeros must not be printed. Don't print the decimal point if the result is an integer.,The output will consist of one line for each line of input giving the exact value of R^n. Leading zeros should be suppressed in the output. Insignificant trailing zeros must not be printed. Don't print the decimal point if the result is an integer.,"95.123 12
-0.4321 20
-5.1234 15
-6.7592  9
-98.999 10
-1.0100 12
-","548815620517731830194541.899025343415715973535967221869852721
-.00000005148554641076956121994511276767154838481760200726351203835429763013462401
-43992025569.928573701266488041146654993318703707511666295476720493953024
-29448126.764121021618164430206909037173276672
-90429072743629540498.107596019456651774561044010001
-1.126825030131969720661201"
 A+B Problem,http://poj.org/problem?id=1000, 1000MS, 10000K,Calculate a+b ,"Two integer a,b (0OutputOutput a+bSample Input1 2Sample Output3HintQ: Where are the input and the output?A: Your program shall always read input from stdin (Standard Input) and write output to stdout (Standard Output). For example, you can use 'scanf' in C or 'cin' in C++ to read from stdin, and use 'printf' in C or 'cout' in C++ to write to stdout.You shall not output any extra data to standard output other than that required by the problem, otherwise you will get a ""Wrong Answer"".User programs are not allowed to open and read from/write to files. You will get a ""Runtime Error"" or a ""Wrong Answer""if you try to do so. Here is a sample solution to problem 1000 using C++/G++:#include <iostream>using namespace std;int main(){    int a,b;    cin >> a >> b;    cout     return 0;}It's important that the return type of main() must be int when you use G++/GCC,or you may get compile error.Here is a sample solution to problem 1000 using C/GCC:#include <stdio.h>int main(){    int a,b;    scanf(""%d %d"",&a, &b);    printf(""%d\n"",a+b);    return 0;}Here is a sample solution to problem 1000 using Pascal:program p1000(Input,Output);var  a,b:Integer;begin   Readln(a,b);   Writeln(a+b);end.Here is a sample solution to problem 1000 using Java:Now java compiler is jdk 1.5, next is program for 1000import java.io.*;import java.util.*;public class Main{            public static void main(String args[]) throws Exception            {                    Scanner cin=new Scanner(System.in);                    int a=cin.nextInt(),b=cin.nextInt();                    System.out.println(a+b);            }}Old program for jdk 1.4import java.io.*;import java.util.*;public class Main{    public static void main (String args[]) throws Exception    {        BufferedReader stdin =             new BufferedReader(                new InputStreamReader(System.in));        String line = stdin.readLine();        StringTokenizer st = new StringTokenizer(line);        int a = Integer.parseInt(st.nextToken());        int b = Integer.parseInt(st.nextToken());        System.out.println(a+b);    }}Here is a sample solution to problem 1000 using Fortran:	PROGRAM P1000		IMPLICIT NONE		INTEGER :: A, B		READ(*,*) A, B		WRITE(*, ""(I0)"") A + B	END PROGRAM P1000SourcePOJ",Output a+b,1 2,3
+2D-Nim,http://poj.org/problem?id=1021, 1000MS, 10000K,"The 2D-Nim board game is played on a grid, with pieces on the grid points. On each move, a player may remove any positive number of contiguous pieces in any row or column. The player who removes the last piece wins. For example, consider the left grid in the following figure.The player on move may remove (A), (B), (A, B), (A, B, C), or (B,F), etc., but may not remove (A, C), (D, E), (H, I) or (B, G).For purposes of writing 2D-Nim-playing software, a certain programmer wants to be able to tell whether or not a certain position has ever been analyzed previously. Because of the rules of 2D-Nim, it should be clear that the two boards above are essentially equivalent. That is, if there is a winning strategy for the left board, the same one must apply to the right board. The fact that the contiguous groups of pieces appear in different places and orientations is clearly irrelevant. All that matters is that the same clusters of pieces (a cluster being a set of contiguous pieces that can be reached from each other by a sequence of one-square vertical or horizontal moves) appear in each. For example, the cluster of pieces (A, B, C, F, G) appears on both boards, but it has been reflected (swapping left and right), rotated, and moved. Your task is to determine whether two given board states are equivalent in this sense or not.","The first line of the input file contains a single integer t (1 ≤ t ≤ 10), the number of test cases, followed by the input data for each test case. The first line of each test case consists of three integers W, H, and n (1 ≤ W, H ≤ 100). W is the width, and H is the height of the grid in terms of the number of grid points. n is the number of pieces on each board. The second line of each test case contains a sequence of n pairs of integers xi , yi, giving the coordinates of the pieces on the first board (0 ≤ xi OutputYour program should produce a single line for each test case containing a word YES or NO indicating whether the two boards are equivalent or not.Sample Input2
+8 5 11
+0 0 1 0 2 0 5 0 7 0 1 1 2 1 5 1 3 3 5 2 4 4
+0 4 0 3 0 2 1 1 1 4 1 3 3 3 5 2 6 2 7 2 7 4
+8 5 11
+0 0 1 0 2 0 5 0 7 0 1 1 2 1 5 1 3 3 6 1 4 4
+0 4 0 3 0 2 1 1 1 4 1 3 3 3 5 2 6 2 7 2 7 4Sample OutputYES
+NOSourceTehran 2002, First Iran Nationwide Internet Programming Contest",Your program should produce a single line for each test case containing a word YES or NO indicating whether the two boards are equivalent or not.,"2
+8 5 11
+0 0 1 0 2 0 5 0 7 0 1 1 2 1 5 1 3 3 5 2 4 4
+0 4 0 3 0 2 1 1 1 4 1 3 3 3 5 2 6 2 7 2 7 4
+8 5 11
+0 0 1 0 2 0 5 0 7 0 1 1 2 1 5 1 3 3 6 1 4 4
+0 4 0 3 0 2 1 1 1 4 1 3 3 3 5 2 6 2 7 2 7 4","YES
+NO"
 Anniversary Cake,http://poj.org/problem?id=1020, 1000MS, 10000K,"Nahid Khaleh decides to invite the kids of the ""Shahr-e Ghashang"" to her wedding anniversary. She wants to prepare a square-shaped chocolate cake with known size. She asks each invited person to determine the size of the piece of cake that he/she wants (which should also be square-shaped). She knows that Mr. Kavoosi would not bear any wasting of the cake. She wants to know whether she can make a square cake with that size that serves everybody exactly with the requested size, and without any waste.","The first line of the input file contains a single integer t (1 ≤ t ≤ 10), the number of test cases, followed by input data for each test case. Each test case consist of a single line containing an integer s, the side of the cake, followed by an integer n (1 ≤ n ≤ 16), the number of cake pieces, followed by n integers (in the range 1..10) specifying the side of each piece.",There should be one output line per test case containing one of the words KHOOOOB! or HUTUTU! depending on whether the cake can be cut into pieces of specified size without any waste or not.,"2
 4 8 1 1 1 1 1 3 1 1
 5 6 3 3 2 1 1 1","KHOOOOB!
@@ -164,6 +131,36 @@ Edge Detection,http://poj.org/problem?id=1009, 1000MS, 10000K,"IONU Satellite Im
 0 0
 0
 "
+Maya Calendar,http://poj.org/problem?id=1008, 1000MS, 10000K,"During his last sabbatical, professor M. A. Ya made a surprising discovery about the old Maya calendar. From an old knotted message, professor discovered that the Maya civilization used a 365 day long year, called Haab, which had 19 months. Each of the first 18 months was 20 days long, and the names of the months were pop, no, zip, zotz, tzec, xul, yoxkin, mol, chen, yax, zac, ceh, mac, kankin, muan, pax, koyab, cumhu. Instead of having names, the days of the months were denoted by numbers starting from 0 to 19. The last month of Haab was called uayet and had 5 days denoted by numbers 0, 1, 2, 3, 4. The Maya believed that this month was unlucky, the court of justice was not in session, the trade stopped, people did not even sweep the floor. For religious purposes, the Maya used another calendar in which the year was called Tzolkin (holly year). The year was divided into thirteen periods, each 20 days long. Each day was denoted by a pair consisting of a number and the name of the day. They used 20 names: imix, ik, akbal, kan, chicchan, cimi, manik, lamat, muluk, ok, chuen, eb, ben, ix, mem, cib, caban, eznab, canac, ahau and 13 numbers; both in cycles. Notice that each day has an unambiguous description. For example, at the beginning of the year the days were described as follows: 1 imix, 2 ik, 3 akbal, 4 kan, 5 chicchan, 6 cimi, 7 manik, 8 lamat, 9 muluk, 10 ok, 11 chuen, 12 eb, 13 ben, 1 ix, 2 mem, 3 cib, 4 caban, 5 eznab, 6 canac, 7 ahau, and again in the next period 8 imix, 9 ik, 10 akbal . . .Years (both Haab and Tzolkin) were denoted by numbers 0, 1, : : : , where the number 0 was the beginning of the world. Thus, the first day was: Haab: 0. pop 0 Tzolkin: 1 imix 0 Help professor M. A. Ya and write a program for him to convert the dates from the Haab calendar to the Tzolkin calendar. ","The date in Haab is given in the following format:NumberOfTheDay. Month YearThe first line of the input file contains the number of the input dates in the file. The next n lines contain n dates in the Haab calendar format, each in separate line. The year is smaller then 5000. ","The date in Tzolkin should be in the following format:Number NameOfTheDay YearThe first line of the output file contains the number of the output dates. In the next n lines, there are dates in the Tzolkin calendar format, in the order corresponding to the input dates. ","3
+10. zac 0
+0. pop 0
+10. zac 1995","3
+3 chuen 0
+1 imix 0
+9 cimi 2801"
+DNA Sorting,http://poj.org/problem?id=1007, 1000MS, 10000K,"One measure of ``unsortedness'' in a sequence is the number of pairs of entries that are out of order with respect to each other. For instance, in the letter sequence ``DAABEC'', this measure is 5, since D is greater than four letters to its right and E is greater than one letter to its right. This measure is called the number of inversions in the sequence. The sequence ``AACEDGG'' has only one inversion (E and D)---it is nearly sorted---while the sequence ``ZWQM'' has 6 inversions (it is as unsorted as can be---exactly the reverse of sorted).You are responsible for cataloguing a sequence of DNA strings (sequences containing only the four letters A, C, G, and T). However, you want to catalog them, not in alphabetical order, but rather in order of ``sortedness'', from ``most sorted'' to ``least sorted''. All the strings are of the same length.","The first line contains two integers: a positive integer n (0 OutputOutput the list of input strings, arranged from ``most sorted'' to ``least sorted''. Since two strings can be equally sorted, then output them according to the orginal order.Sample Input10 6
+AACATGAAGG
+TTTTGGCCAA
+TTTGGCCAAA
+GATCAGATTT
+CCCGGGGGGA
+ATCGATGCATSample OutputCCCGGGGGGA
+AACATGAAGG
+GATCAGATTT
+ATCGATGCAT
+TTTTGGCCAA
+TTTGGCCAAASourceEast Central North America 1998","Output the list of input strings, arranged from ``most sorted'' to ``least sorted''. Since two strings can be equally sorted, then output them according to the orginal order.","10 6
+AACATGAAGG
+TTTTGGCCAA
+TTTGGCCAAA
+GATCAGATTT
+CCCGGGGGGA
+ATCGATGCAT","CCCGGGGGGA
+AACATGAAGG
+GATCAGATTT
+ATCGATGCAT
+TTTTGGCCAA
+TTTGGCCAAA"
 Square Ice,http://poj.org/problem?id=1099, 1000MS, 10000K,"Square Ice is a two-dimensional arrangement of water molecules H2O, with oxygen at the vertices of a square lattice and one hydrogen atom between each pair of adjacent oxygen atoms. The hydrogen atoms must stick out on the left and right sides but are not allowed to stick out the top or bottom. One 5 x 5 example is shown below. Note that each hydrogen atom is attached to exactly one of its neighboring oxygen atoms and each oxygen atom is attached to two of its neighboring hydrogen atoms. (Recall that one water molecule is a unit of one O linked to two H's.)It turns out we can encode a square ice pattern with what is known as an alternating sign matrix (ASM): horizontal molecules are encoded as 1, vertical molecules are encoded as -1 and all other molecules are encoded as 0. So, the above pattern would be encoded as:An ASM is a square matrix with entries 0, 1 and -1, where the sum of each row and column is 1 and the non-zero entries in each row and in each column must alternate in sign. (It turns out there is a one-to-one correspondence between ASM's and square ice patterns!)Your job is to display the square ice pattern, in the same format as the example above, for a given ASM. Use dashes (-) for horizontal attachments and vertical bars (|) for vertical attachments. The pattern should be surrounded with a border of asterisks (*), be left justified and there should be exactly one character between neighboring hydrogen atoms (H) and oxygen atoms (O): either a space, a dash or a vertical bar.","Input consists of multiple cases. Each case consists of a positive integer m (OutputFor each case, print the case number (starting from 1), in the format shown in the Sample Output, followed by a blank line, followed by the corresponding square ice pattern in the format described above. Separate the output of different cases by a blank line.Sample Input2
 0 1
 1 0
@@ -368,7 +365,22 @@ A<Z
 0 0
 Sample OutputSorted sequence determined after 4 relations: ABCD.
 Inconsistency found after 2 relations.
-Sorted sequence cannot be determined.SourceEast Central North America 2001",East Central North America 2001,"For each problem instance, output consists of one line. This line should be one of the following three:Sorted sequence determined after xxx relations: yyy...y.Sorted sequence cannot be determined.Inconsistency found after xxx relations.where xxx is the number of relations processed at the time either a sorted sequence is determined or an inconsistency is found, whichever comes first, and yyy...y is the sorted, ascending sequence.","4 6
+Sorted sequence cannot be determined.SourceEast Central North America 2001","Input consists of multiple problem instances. Each instance starts with a line containing two positive integers n and m. the first value indicated the number of objects to sort, where 2 OutputFor each problem instance, output consists of one line. This line should be one of the following three:Sorted sequence determined after xxx relations: yyy...y.Sorted sequence cannot be determined.Inconsistency found after xxx relations.where xxx is the number of relations processed at the time either a sorted sequence is determined or an inconsistency is found, whichever comes first, and yyy...y is the sorted, ascending sequence.Sample Input4 6
+A<B
+A<C
+B<C
+C<D
+B<D
+A<B
+3 2
+A<B
+B<A
+26 1
+A<Z
+0 0
+Sample OutputSorted sequence determined after 4 relations: ABCD.
+Inconsistency found after 2 relations.
+Sorted sequence cannot be determined.SourceEast Central North America 2001","For each problem instance, output consists of one line. This line should be one of the following three:Sorted sequence determined after xxx relations: yyy...y.Sorted sequence cannot be determined.Inconsistency found after xxx relations.where xxx is the number of relations processed at the time either a sorted sequence is determined or an inconsistency is found, whichever comes first, and yyy...y is the sorted, ascending sequence.","4 6
 A<B
 A<C
 B<C
@@ -1443,7 +1455,21 @@ Pipe,http://poj.org/problem?id=1039, 1000MS, 10000K,"The GX Light Pipeline Compa
 17 -16.55
 0
 Sample Output4.67
-Through all the pipe.SourceCentral Europe 1995",Central Europe 1995,"The output file contains lines corresponding to blocks in input file. To each block in the input file there is one line in the output file. Each such line contains either a real value, written with precision of two decimal places, or the message Through all the pipe.. The real value is the desired maximal x-coordinate of the point where the light can reach from the source for corresponding pipe component. If this value equals to xn, then the message Through all the pipe. will appear in the output file. ","4
+Through all the pipe.SourceCentral Europe 1995","The input file contains several blocks each describing one pipe component. Each block starts with the number of bent points 2 OutputThe output file contains lines corresponding to blocks in input file. To each block in the input file there is one line in the output file. Each such line contains either a real value, written with precision of two decimal places, or the message Through all the pipe.. The real value is the desired maximal x-coordinate of the point where the light can reach from the source for corresponding pipe component. If this value equals to xn, then the message Through all the pipe. will appear in the output file. Sample Input4
+0 1
+2 2
+4 1
+6 4
+6
+0 1
+2 -0.6
+5 -4.45
+7 -5.57
+12 -10.8
+17 -16.55
+0
+Sample Output4.67
+Through all the pipe.SourceCentral Europe 1995","The output file contains lines corresponding to blocks in input file. To each block in the input file there is one line in the output file. Each such line contains either a real value, written with precision of two decimal places, or the message Through all the pipe.. The real value is the desired maximal x-coordinate of the point where the light can reach from the source for corresponding pipe component. If this value equals to xn, then the message Through all the pipe. will appear in the output file. ","4
 0 1
 2 2
 4 1
@@ -1544,4 +1570,308 @@ Defragment,http://poj.org/problem?id=1033, 2000MS, 10000K,"You are taking part i
 5 20
 7 5
 20 7"
-Parliament,http://poj.org/problem?id=1032, 1000MS, 10000K,"New convocation of The Fool Land's Parliament consists of N delegates. According to the present regulation delegates should be divided into disjoint groups of different sizes and every day each group has to send one delegate to the conciliatory committee. The composition of the conciliatory committee should be different each day. The Parliament works only while this can be accomplished. You are to write a program that will determine how many delegates should contain each group in order for Parliament to work as long as possible.",The input file contains a single integer N (5OutputWrite to the output file the sizes of groups that allow the Parliament to work for the maximal possible time. These sizes should be printed on a single line in ascending order and should be separated by spaces. Sample Input7Sample Output3 4SourceNortheastern Europe 1998,Write to the output file the sizes
+Parliament,http://poj.org/problem?id=1032, 1000MS, 10000K,"New convocation of The Fool Land's Parliament consists of N delegates. According to the present regulation delegates should be divided into disjoint groups of different sizes and every day each group has to send one delegate to the conciliatory committee. The composition of the conciliatory committee should be different each day. The Parliament works only while this can be accomplished. You are to write a program that will determine how many delegates should contain each group in order for Parliament to work as long as possible.",The input file contains a single integer N (5OutputWrite to the output file the sizes of groups that allow the Parliament to work for the maximal possible time. These sizes should be printed on a single line in ascending order and should be separated by spaces. Sample Input7Sample Output3 4SourceNortheastern Europe 1998,Write to the output file the sizes of groups that allow the Parliament to work for the maximal possible time. These sizes should be printed on a single line in ascending order and should be separated by spaces. ,7,3 4
+Fence,http://poj.org/problem?id=1031, 1000MS, 10000K,"There is an area bounded by a fence on some flat field. The fence has the height h and in the plane projection it has a form of a closed polygonal line (without self-intersections), which is specified by Cartesian coordinates (Xi, Yi) of its N vertices. At the point with coordinates (0, 0) a lamp stands on the field. The lamp may be located either outside or inside the fence, but not on its side as it is shown in the following sample pictures (parts shown in a thin line are not illuminated by the lamp):The fence is perfectly black, i.e. it is neither reflecting, nor diffusing, nor letting the light through. Research and experiments showed that the following law expresses the intensity of light falling on an arbitrary illuminated point of this fence:I0=k/rwhere k is a known constant value not depending on the point in question, r is the distance between this point and the lamp in the plane projection. The illumination of an infinitesimal narrow vertical board with the width dl and the height h is dI=I0*|cosα|*dl*hwhere I0 is the intensity of light on that board of the fence, α is the angle in the plane projection between the normal to the side of the fence at this point and the direction to the lamp.You are to write a program that will find the total illumination of the fence that is defined as the sum of illuminations of all its illuminated boards.","The first line of the input file contains the numbers k, h and N, separated by spaces. k and h are real constants. N (3 OutputWrite to the output file the total illumination of the fence rounded to the second digit after the decimal point.Sample Input0.5 1.7 3
+1.0 3.0
+2.0 -1.0
+-4.0 -1.0
+Sample Output5.34SourceNortheastern Europe 1998",Write to the output file the total illumination of the fence rounded to the second digit after the decimal point.,"0.5 1.7 3
+1.0 3.0
+2.0 -1.0
+-4.0 -1.0
+",5.34
+Rating,http://poj.org/problem?id=1030, 1000MS, 10000K,"One of the participants of both regional contests which took place in St. Petersburg decided to determine overall rating for all teams that took part in at least one contest. This participant assigned each team a unique team identifier, which was an integer from 1 to 100 inclusively. For each contest team identifiers of the participating teams were written in a column according to their place in that contest. Identifiers of the teams that had equal results were written on the same line. The participant started with the team(s) that was(were) the best in that contest (writing them on the first line) and continued in the order of decreasing results.  Definition: Let's say that the team has place K in the contest if exactly K-1   teams performed in that contest better.Consider the following examples of two contests' results:      Contest       no. 1                          Contest       no. 2                              place                          team's id                          place                          team's id                              1                          9                          1                          3                              2                          7 1 4                          2                          5                              5                          5                          3                          1 10                              6                          15 8                          5                          6                              8                          31 18                          6                          9                              10                          17                          7                          19                                                                                    8                          4 20                                                                                    10                          21                  The overall rating for the teams which took part in both contests is defined in the following way:1)	If some team performed better in both contests than some other team (or better in one contest and with the same result in the other contest) then the overall rating of the former team is higher than the rating of the latter team.2)	If one of the teams in question performed better in one contest and the other team performed better in another contest then their overall rating depends on the difference of their places in both contests. So, in our example team 1 is better than team 5 in the first contest with a difference of 3 places and worse in the second contest with a difference of only 1 place, therefore the overall rating of team 1 is higher than team 5's one. If the difference of the places is the same for both contests then that teams have the equal overall ratings. The latter is also true for the teams that performed equally in both contests.In our example only teams 1, 4, 5, and 9 participated twice. Team 1 has the highest rating, teams 5 and 9 with the equal rating follow, and team 4 has the lowest rating.For the teams that participated in one contest only the overall rating and their position in the resulting list cannot be always determined. They are included in the overall list (where the teams which participated twice already placed according to the rules above) if one of the following takes place:A)	If there is a team that participated in both contests and shared the place in one of the contests with the team in question then the latter team shares the overall rating with this team too (if there is more than one such team, then they all should have the same overall rating, otherwise the overall rating of the team in question cannot be determined).B)	If there is a position in the overall list (either at the beginning of the list, at the end of the list, or between some lines), such that before this position only the teams are located which performed better in the same contest as the team in question and after this position only the teams are located which performed worse in the same contest as the team in question, then the team in question occupies this position in the overall list. If more than one team claim to have the same position in the overall list, then their mutual order is defined by their places in their contests (look at the example below for details).            Teams       that participated in both contests                          Teams       that participated in one contest only                                                         3                              1                          10                              9       5                                                                                    19                              4                          20                                                         15       8                                                         31       18                                                         17 21                  ?Team 3 will occupy the first place in the overall list (rule B).?The positions of teams 6 and 7 cannot be determined.?Team 10 will share the overall rating with team 1 (rule A).?Team 20 will share the overall rating with team 4 (rule A).?Team 19 will occupy the position between teams 9, 5 and team 4 (rule B).?Teams 8, 15, 17, 18, 21, and 31 will finish the overall list (rule B). But the first of them will be teams 15 and 8 (that took 6th place) followed by teams 31 and 18 (that took 8th place) and teams 17 and 21 (that took 10th place).Your task is to write a program that will create the overall rating list using the result tables of two contests and the given rules.","The input file contains a description of the two contests, which are separated by an empty line. Each description starts with a line containing the single integer N (1 Every team identifier occurs at most once in the description of each contest.",Write to the output file one or more lines with the team identifiers (separated by spaces) that represent the overall rating list. The teams that share the same rating (thus written on the same line) is written in ascending order. The teams for which the overall rating is not determined should be absent in the output file.,"6
+9
+7 1 4
+5
+15 8
+31 18
+17
+
+8
+3
+5
+1 10
+6
+9
+19
+4 20
+21
+","3
+1 10
+5 9
+19
+4 20
+8 15
+18 31
+17 21"
+False coin,http://poj.org/problem?id=1029, 1000MS, 65536K,"The ""Gold Bar""bank received information from reliable sources that in their last group of N coins exactly one coin is false and differs in weight from other coins (while all other coins are equal in weight). After the economic crisis they have only a simple balance available (like one in the picture). Using this balance, one is able to determine if the weight of objects in the left pan is less than, greater than, or equal to the weight of objects in the right pan.In order to detect the false coin the bank employees numbered all coins by the integers from 1 to N, thus assigning each coin a unique integer identifier. After that they began to weight various groups of coins by placing equal numbers of coins in the left pan and in the right pan. The identifiers of coins and the results of the weightings were carefully recorded.You are to write a program that will help the bank employees to determine the identifier of the false coin using the results of these weightings.","The first line of the input file contains two integers N and K, separated by spaces, where N is the number of coins (2', or '='. It represents the result of the weighting:''>' means that the weight of coins in the left pan is greater than the weight of coins in the right pan,'=' means that the weight of coins in the left pan is equal to the weight of coins in the right pan.","Write to the output file the identifier of the false coin or 0, if it cannot be found by the results of the given weightings.","5 3
+2 1 2 3 4
+Sample Output3SourceNortheastern Europe 1998",3
+Web Navigation,http://poj.org/problem?id=1028, 1000MS, 10000K,"Standard web browsers contain features to move backward and forward among the pages recently visited. One way to implement these features is to use two stacks to keep track of the pages that can be reached by moving backward and forward. In this problem, you are asked to implement this. The following commands need to be supported: BACK: Push the current page on the top of the forward stack. Pop the page from the top of the backward stack, making it the new current page. If the backward stack is empty, the command is ignored. FORWARD: Push the current page on the top of the backward stack. Pop the page from the top of the forward stack, making it the new current page. If the forward stack is empty, the command is ignored. VISIT : Push the current page on the top of the backward stack, and make the URL specified the new current page. The forward stack is emptied. QUIT: Quit the browser. Assume that the browser initially loads the web page at the URL http://www.acm.org/ ","Input is a sequence of commands. The command keywords BACK, FORWARD, VISIT, and QUIT are all in uppercase. URLs have no whitespace and have at most 70 characters. You may assume that no problem instance requires more than 100 elements in each stack at any time. The end of input is indicated by the QUIT command. ","For each command other than QUIT, print the URL of the current page after the command is executed if the command is not ignored. Otherwise, print ""Ignored"". The output for each command should be printed on its own line. No output is produced for the QUIT command. ","VISIT http://acm.ashland.edu/
+VISIT http://acm.baylor.edu/acmicpc/
+BACK
+BACK
+BACK
+FORWARD
+VISIT http://www.ibm.com/
+BACK
+BACK
+FORWARD
+FORWARD
+FORWARD
+QUIT","http://acm.ashland.edu/
+http://acm.baylor.edu/acmicpc/
+http://acm.ashland.edu/
+http://www.acm.org/
+Ignored
+http://acm.ashland.edu/
+http://www.ibm.com/
+http://acm.ashland.edu/
+http://www.acm.org/
+http://acm.ashland.edu/
+http://www.ibm.com/
+Ignored"
+The Same Game,http://poj.org/problem?id=1027, 1000MS, 10000K,"The game named ""Same"" is a single person game played on a 10 \Theta 15 board. Each square contains a ball colored red (R), green (G), or blue (B). Two balls belong to the same cluster if they have the same color, and one can be reached from another by following balls of the same color in the four directions up, down, left, and right. At each step of the game, the player chooses a ball whose cluster has at least two balls and removes all balls in the cluster from the board. Then, the board is ""compressed"" in two steps: 1. Shift the remaining balls in each column down to fill the empty spaces. The order of the balls in each column is preserved. 2. If a column becomes empty, shift the remaining columns to the left as far as possible. The order of the columns is preserved. For example, choosing the ball at the bottom left corner in the sub-board below causes: The objective of the game is to remove every ball from the board, and the game is over when every ball is removed or when every cluster has only one ball. The scoring of each game is as follows. The player starts with a score of 0. When a cluster of m balls is removed, the player's score increases by (m-2)^2 . A bonus of 1000 is given if every ball is removed at the end of the game. You suspect that a good strategy might be to choose the ball that gives the largest possible cluster at each step, and you want to test this strategy by writing a program to simulate games played using this strategy. If there are two or more balls to choose from, the program should choose the leftmost ball giving the largest cluster. If there is still a tie, it should choose the bottommost ball of these leftmost balls. ","You will be given a number of games in the input. The first line of input contains a positive integer giving the number of games to follow. The initial arrangement of the balls of each game is given one row at a time, from top to bottom. Each row contains 15 characters, each of which is one of ""R"", ""G"", or ""B"", specifying the colors of the balls in the row from left to right. A blank line precedes each game. ","For each game, print the game number, followed by a new line, followed by information about each move, followed by the final score. Each move should be printed in the format: Move x at (r,c): removed b balls of color C, got s points. where x is the move number, r and c are the row number and column number of the chosen ball, respectively. The rows are numbered from 1 to 10 from the bottom, and columns are numbered from 1 to 15 from the left. b is the number of balls in the cluster removed. C is one of ""R"", ""G"", or ""B"", indicating the color of the balls removed. s is the score for this move. The score does not include the 1000 point bonus if all the balls are removed after the move. The final score should be reported as follows: Final score: s, with b balls remaining. Insert a blank line between the output of each game. Use the plural forms ""balls"" and ""points"" even if the corresponding value is 1. ","3 
+RGGBBGGRBRRGGBG 
+RBGRBGRBGRBGRBG
+RRRRGBBBRGGRBBB
+GGRGBGGBRRGGGBG
+GBGGRRRRRBGGRRR
+BBBBBBBBBBBBBBB
+BBBBBBBBBBBBBBB
+RRRRRRRRRRRRRRR
+RRRRRRGGGGRRRRR
+GGGGGGGGGGGGGGG
+
+RRRRRRRRRRRRRRR
+RRRRRRRRRRRRRRR
+GGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGG
+BBBBBBBBBBBBBBB
+BBBBBBBBBBBBBBB
+RRRRRRRRRRRRRRR
+RRRRRRRRRRRRRRR 
+GGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGG
+
+RBGRBGRBGRBGRBG
+BGRBGRBGRBGRBGR
+GRBGRBGRBGRBGRB
+RBGRBGRBGRBGRBG
+BGRBGRBGRBGRBGR
+GRBGRBGRBGRBGRB
+RBGRBGRBGRBGRBG
+BGRBGRBGRBGRBGR
+GRBGRBGRBGRBGRB
+RBGRBGRBGRBGRBG","Game 1: 
+
+Move 1 at (4,1): removed 32 balls of color B, got 900 points. 
+Move 2 at (2,1): removed 39 balls of color R, got 1369 points. 
+Move 3 at (1,1): removed 37 balls of color G, got 1225 points. 
+Move 4 at (3,4): removed 11 balls of color B, got 81 points. 
+Move 5 at (1,1): removed 8 balls of color R, got 36 points. 
+Move 6 at (2,1): removed 6 balls of color G, got 16 points. 
+Move 7 at (1,6): removed 6 balls of color B, got 16 points. 
+Move 8 at (1,2): removed 5 balls of color R, got 9 points. 
+Move 9 at (1,2): removed 5 balls of color G, got 9 points. 
+Final score: 3661, with 1 balls remaining. 
+
+Game 2: 
+
+Move 1 at (1,1): removed 30 balls of color G, got 784 points. 
+Move 2 at (1,1): removed 30 balls of color R, got 784 points. 
+Move 3 at (1,1): removed 30 balls of color B, got 784 points. 
+Move 4 at (1,1): removed 30 balls of color G, got 784 points. 
+Move 5 at (1,1): removed 30 balls of color R, got 784 points. 
+Final score: 4920, with 0 balls remaining. 
+
+Game 3: 
+
+Final score: 0, with 150 balls remaining. "
+Cipher,http://poj.org/problem?id=1026, 1000MS, 10000K,"Bob and Alice started to use a brand-new encoding scheme. Surprisingly it is not a Public Key Cryptosystem, but their encoding and decoding is based on secret keys. They chose the secret key at their last meeting in Philadelphia on February 16th, 1996. They chose as a secret key a sequence of n distinct integers, a1 ; . . .; an, greater than zero and less or equal to n. The encoding is based on the following principle. The message is written down below the key, so that characters in the message and numbers in the key are correspondingly aligned. Character in the message at the position i is written in the encoded message at the position ai, where ai is the corresponding number in the key. And then the encoded message is encoded in the same way. This process is repeated k times. After kth encoding they exchange their message.The length of the message is always less or equal than n. If the message is shorter than n, then spaces are added to the end of the message to get the message with the length n.Help Alice and Bob and write program which reads the key and then a sequence of pairs consisting of k and message to be encoded k times and produces a list of encoded messages. ","The input file consists of several blocks. Each block has a number 0 OutputOutput is divided into blocks corresponding to the input blocks. Each block contains the encoded input messages in the same order as in input file. Each encoded message in the output file has the lenght n. After each block there is one empty line. Sample Input10
+4 5 3 7 2 8 1 6 10 9
+1 Hello Bob
+1995 CERC
+0
+0
+Sample OutputBolHeol  b
+C RCE
+
+SourceCentral Europe 1995",Output is divided into blocks corresponding to the input blocks. Each block contains the encoded input messages in the same order as in input file. Each encoded message in the output file has the lenght n. After each block there is one empty line. ,"10
+4 5 3 7 2 8 1 6 10 9
+1 Hello Bob
+1995 CERC
+0
+0
+","BolHeol  b
+C RCE
+
+"
+Department,http://poj.org/problem?id=1025, 1000MS, 10000K,"The Department of Security has a new headquarters building. The building has several floors, and on each floor there are rooms numbered xxyy where yy stands for the room number and xx for the floor number, 0 Each agent enters the building at the 1st floor, passes the reception and then starts to visit the rooms according to his/her list. Agents always visit the rooms by the increasing room numbers. The agents form a linear hierarchy according to which they have assigned their one letter personal codes. The agents with higher seniority have lexicographically smaller codes. No two agents have the same code.If more then one agent want to enter a room, or an elevator, the agents have to form a queue. In each queue, they always stand according to their codes. The higher the seniority of the agent, the closer to the top of the queue he stands. Every 5 s (seconds) the first agent in the queue in front of the elevator enters the elevator. After visiting the last room in the headquarters each agent uses if necessary elevator to the first floor and exits the building.The times necessary to move from a certain point in the headquarters to another are set as follows: Entering the building, i.e. passing the reception and reaching the elevator, or a room on the first floor takes 30 s. Exiting the building, i.e. stepping out of the elevator or a room on the first floor and passing the reception takes also 30 s. On the same floor, the transfer from the elevator to the room (or to the queue in front of the room), or from the room to the elevator (or to the queue in front of the elevator), or from one room to another (or to the queue in front of the room) takes 10 s. The transfer from one floor to the next floor above or below in an elevator takes 30 s. Write a program that determines time course of agent's visits in the headquarters. ","The input file contains the descriptions of n >= 0 visits of different agents. The first line of the description of each visit consists of agent's one character code C, C = A, . . ., Z, and the time when the agent enters the headquarters. The time is in the format HH:MM:SS (hours, minutes, seconds). The next lines (there will be at least one) contain the room number, and the length of time intended to stay in the room, time is in seconds. Each room is in a separate line. The list of rooms is sorted according to the increasing room number. The list of rooms ends by the line containing 0. The list of the descriptions of visits ends by the line containing the character dot. ","The output contains detailed records of each agent's visit in the headquarters. For each agent, there will be a block. Blocks are ordered in the order of increasing agent's codes. Blocks are separated by an empty line. After the last block there is an empty line too. The first line of a block contains the code of agent. Next lines contain the starting and ending time (in format HH:MM:SS) and the descriptions of his/her activity. Time data will be separated by one blank character. Description will be separated from time by one blank character. Description will have a form Entry, Exit or Message. The Message can be one of the following: Waiting in elevator queue, Waiting in front of room RoomNumber, Transfer from room RoomNumber to room RoomNumber, Transfer from elevator to room RoomNumber, Transfer from RoomNumber to elevator, Stay in room RoomNumber, Stay in elevator. ","A 10:00:00
+0101 100
+0110 50
+0202 90
+0205 50
+0
+B 10:01:00
+0105 100
+0201 5
+0205 200
+0
+.
+","A
+10:00:00 10:00:30 Entry
+10:00:30 10:02:10 Stay in room 0101
+10:02:10 10:02:20 Transfer from room 0101 to room 0110
+10:02:20 10:03:10 Stay in room 0110
+10:03:10 10:03:20 Transfer from room 0110 to elevator
+10:03:20 10:03:50 Stay in elevator
+10:03:50 10:04:00 Transfer from elevator to room 0202
+10:04:00 10:05:30 Stay in room 0202
+10:05:30 10:05:40 Transfer from room 0202 to room 0205
+10:05:40 10:07:40 Waiting in front of room 0205
+10:07:40 10:08:30 Stay in room 0205
+10:08:30 10:08:40 Transfer from room 0205 to elevator
+10:08:40 10:09:10 Stay in elevator
+10:09:10 10:09:40 Exit
+
+B
+10:01:00 10:01:30 Entry
+10:01:30 10:03:10 Stay in room 0105
+10:03:10 10:03:20 Transfer from room 0105 to elevator
+10:03:20 10:03:25 Waiting in elevator queue
+10:03:25 10:03:55 Stay in elevator
+10:03:55 10:04:05 Transfer from elevator to room 0201
+10:04:05 10:04:10 Stay in room 0201
+10:04:10 10:04:20 Transfer from room 0201 to room 0205
+10:04:20 10:07:40 Stay in room 0205
+10:07:40 10:07:50 Transfer from room 0205 to elevator
+10:07:50 10:08:20 Stay in elevator
+10:08:20 10:08:50 Exit
+"
+Tester Program,http://poj.org/problem?id=1024, 1000MS, 10000K,"Tester ProgramFor this contest, we first designed the following problem (note that you do not have to solve it!):Another Wall in the MazeIn ACM/ICPC contests, you'll often see questions such as ""find the shortest path out of this maze."" Let's turn this on its head and ask ""given a path, find a maze for which the given path is the shortest path."" Our paths will run vertically and horizontally between the regularly spaced points of a rectangular grid. The problem is to compute a set of unit-length baffles (walls) separating grid points that forces the given path to be the unique shortest path from its starting point to the end point. To make things more interesting, we will require that there should be no redundant walls constructed in the sense that it should not be possible to remove any wall and still have the given path as the unique shortest path. In the following figure for example, consider the path through the 8 ? 5 grid on the left maze of the top row. The wall placements in the two mazes to its right (top row) make that path unique. The two mazes on the lower row are faulty.The path is not unique in the one on the left, and there are some redundant walls on the right.Input (of the original problem)The first line of the input file contains a single integer t (1 ≤ t ≤ 10), the number of test cases, followed by the input data for each test case. The first line of each test case consists of two integers W and H (1 ≤ W, H ≤ 100) giving the width and height of the grid respectively. The second line of the test case contains a path. The path always starts in the lowerleft corner, (0, 0). It is specified as a string of U (up), D (down), L (left), and R (right) characters (with no embedded white space). You may assume that the path remains within the bounds of the maze and does not intersect itself. It may end anywhere in the maze (i.e., not necessarily in a corner or against a wall).Output (of the original problem)First line of the output for the i-th test case (starting from one) should contain an integer M, the number of walls used in the solution. Following the first line, there are M lines each containing a wall specification in the form of four consecutive integers corresponding to two pairs of (x, y) coordinates specifying adjacent grid points separated by the wall (0 ≤ x Sample Input (of the original problem)28 5RRRUULLURRRRDDRRUUU4 3RRRUUSample Output (of the original problem)190 0 0 11 0 1 12 0 2 12 1 3 13 0 4 03 1 4 13 2 4 23 2 3 32 2 2 34 2 4 30 3 0 41 3 1 42 3 2 43 3 3 44 3 4 45 3 5 45 3 6 35 2 6 26 1 6 222 2 3 22 2 2 1This is the end of the original problem statement! Being lazy, we did not want to spend time to write a tester program for this problem, and decided to have you write this for us!Write a program that receives both input and output as one input test case, and write as output CORRECT or INCORRECT to indicate whether or not the output is correct.","You read both input and output of the original problem from the standard input;it has each output just after each case's input of the original problem.Note that the output of original does not have formatting problems, i.e.,  The number of lines in the output file is correct and is as supposed to be.  There are no leading or trailing white space characters in output lines.  Wall specifications are correct, meaning that the four numbers correctly specify a possible wall within the boundary of the maze.","Your program should write a single line for each test case of the input containing a single word CORRECT or INCORRECT, indicating the original problem has correctly produced the output for that test case or not.","2
+8 5
+RRRUULLURRRRDDRRUUU
+19
+0 0 0 1
+1 0 1 1
+2 0 2 1
+2 1 3 1
+3 0 4 0
+3 1 4 1
+3 2 4 2
+3 2 3 3
+2 2 2 3
+4 2 4 3
+0 3 0 4
+1 3 1 4
+2 3 2 4
+3 3 3 4
+4 3 4 4
+5 3 5 4
+5 3 6 3
+5 2 6 2
+6 1 6 2
+4 3
+RRRUU
+2
+2 2 3 2
+2 2 2 1","CORRECT
+INCORRECT"
+The Fun Number System,http://poj.org/problem?id=1023, 1000MS, 10000K,"In a k bit 2's complement number, where the bits are indexed from 0 to k-1, the weight of the most significant bit (i.e., in position k-1), is -2^(k-1), and the weight of a bit in any position i (0 ≤ i A Fun number system is a positional binary number system, where each bit can be either a negabit, or a posibit. For example consider a 3-bit fun number system Fun3, where bits in positions 0, and 2 are posibits, and the bit in position 1 is a negabit. (110)Fun3 is evaluated as 2^2-2^1 + 0 = 3. Now you are going to have fun with the Fun number systems! You are given the description of a k-bit Fun number system Funk, and an integer N (possibly negative. You should determine the k bits of a representation of N in Funk, or report that it is not possible to represent the given N in the given Funk. For example, a representation of -1 in the Fun3 number system (defined above), is 011 (evaluated as 0 - 2^1 + 2^0), andrepresenting 6 in Fun3 is impossible.","The first line of the input file contains a single integer t (1 ≤ t ≤ 10), the number of test cases, followed by the input data for each test case. Each test case is given in three consecutive lines. In the first line there is a positive integer k (1 ≤ k ≤ 64). In the second line of a test data there is a string of length k, composed only of letters n, and p, describing the Fun number system for that test data, where each n (p) indicates that the bit in that position is a negabit (posibit).The third line of each test data contains an integer N (-2^63 ≤ N system by your program.","For each test data, you should print one line containing either a k-bit string representing the given number N in the Funk number system, or the word Impossible, when it is impossible to represent the given number.","2
+3
+pnp
+6
+4
+ppnn
+10","Impossible
+1110"
+Packing Unit 4D Cubes,http://poj.org/problem?id=1022, 1000MS, 10000K,"We usually think that there are three geometric dimensions; the fourth dimension is usually time. However, the Association for Customizing Machines (ACM) has to deal with four geometrical dimensions for their strange customer EE3 who needs to pack four dimensional products into perpendicular parallelepipeds before shipping them to the newly emerged market niche just on the outskirts of the Milky Way.Each of EE3 products consists of a number of unit 4D cubes that are glued together at their faces. A face of a 4D cube is a 3D cube and each 4D cube has 8 such faces. The picture on the left shows a 4D cube projected into a plane with the four principal, orthogonal axes shown. It takes a bit of effort to stretch our imagination and see the faces of a 4D cube in such a projection. The pictures below try to illustrate how the two faces along each of the four axes are situated in 4D. Again, using just the planar projection it is not so easy to illustrate and takes some effort to see. But we have done a good job, didn't we?Each EE3 product to be packed consists of a number of unit 4D cubes that are glued together along their faces which are 3D cubes. Your job is simple: find the minimal volume measured in the number of unit 4D cubes of a perpendicular parallelepiped (a 4D box) into which the product can be packed before shipping.","The first line of the input file contains a single integer t (1 ≤ t ≤ 10), the number of test cases, followed by input data for each test case describing one EE3 product. The first line of each test case is an integer n (1 ≤ n ≤ 100) which is the number of unit 4D cubes used in the product. Next, there are n lines, each describing one unit cube and contains 9 nonnegative integer numbers.The first number, a positive integer, is the unique identifier of a cube and the remaining 8 numbers give the identities of neighbors of the cube listed in the following order:?the first two numbers are identifiers of the cubes glued to the opposing sides of the given cube along the x1 axis as seen looking in the direction of the x1 axis;?the next two numbers as above but for the x2 axis;?the next two numbers as above but for the x3 axis;?the next two numbers as above but for the x4 axis;If a cube does not have a neighbor glued to one of its faces we use 0 instead of a cube identifier.The problem is that the employees of ACM may produce inconsistent descriptions of EE3 products. There are two sources of such inconsistencies:?A consistent description must be symmetric, i.e. if cube x is glued to cube y at some face then cube y must be glued to cube x at the corresponding face along the same axis. The following description is inconsistent:3 0 0 1 0 0 0 0 01 0 0 3 0 0 0 0 0?Any description must describe a single solid, i.e. there must be only one component in the product. Thus the following is inconsistent:1 2 0 0 0 0 0 0 02 0 1 0 0 0 0 0 03 0 0 4 0 0 0 0 04 0 0 0 3 0 0 0 0","There should be one output line per test case containing either the number of unit 4D cubes in the smallest 4D perpendicular parallelepiped oriented along the axes into which the product can be packed if the description is consistent, or the word Inconsistent, otherwise.","1
+9
+1 2 3 4 5 6 7 8 9
+2 0 1 0 0 0 0 0 0
+3 1 0 0 0 0 0 0 0
+4 0 0 0 1 0 0 0 0
+5 0 0 1 0 0 0 0 0
+6 0 0 0 0 0 1 0 0
+7 0 0 0 0 1 0 0 0
+8 0 0 0 0 0 0 0 1
+9 0 0 0 0 0 0 1 0",81
+Biorhythms,http://poj.org/problem?id=1006, 1000MS, 10000K,"Some people believe that there are three cycles in a person's life that start the day he or she is born. These three cycles are the physical, emotional, and intellectual cycles, and they have periods of lengths 23, 28, and 33 days, respectively. There is one peak in each period of a cycle. At the peak of a cycle, a person performs at his or her best in the corresponding field (physical, emotional or mental). For example, if it is the mental curve, thought processes will be sharper and concentration will be easier. Since the three cycles have different periods, the peaks of the three cycles generally occur at different times. We would like to determine when a triple peak occurs (the peaks of all three cycles occur in the same day) for any person. For each cycle, you will be given the number of days from the beginning of the current year at which one of its peaks (not necessarily the first) occurs. You will also be given a date expressed as the number of days from the beginning of the current year. You task is to determine the number of days from the given date to the next triple peak. The given date is not counted. For example, if the given date is 10 and the next triple peak occurs on day 12, the answer is 2, not 3. If a triple peak occurs on the given date, you should give the number of days to the next occurrence of a triple peak.","You will be given a number of cases. The input for each case consists of one line of four integers p, e, i, and d. The values p, e, and i are the number of days from the beginning of the current year at which the physical, emotional, and intellectual cycles peak, respectively. The value d is the given date and may be smaller than any of p, e, or i. All values are non-negative and at most 365, and you may assume that a triple peak will occur within 21252 days of the given date. The end of input is indicated by a line in which p = e = i = d = -1. ","For each test case, print the case number followed by a message indicating the number of days to the next triple peak, in the form:Case 1: the next triple peak occurs in 1234 days.Use the plural form ``days'' even if the answer is 1. ","0 0 0 0
+0 0 0 100
+5 20 34 325
+4 5 6 7
+283 102 23 320
+203 301 203 40
+-1 -1 -1 -1","Case 1: the next triple peak occurs in 21252 days.
+Case 2: the next triple peak occurs in 21152 days.
+Case 3: the next triple peak occurs in 19575 days.
+Case 4: the next triple peak occurs in 16994 days.
+Case 5: the next triple peak occurs in 8910 days.
+Case 6: the next triple peak occurs in 10789 days."
+I Think I Need a Houseboat,http://poj.org/problem?id=1005, 1000MS, 10000K,"Fred Mapper is considering purchasing some land in Louisiana to build his house on. In the process of investigating the land, he learned that the state of Louisiana is actually shrinking by 50 square miles each year, due to erosion caused by the Mississippi River. Since Fred is hoping to live in this house the rest of his life, he needs to know if his land is going to be lost to erosion.After doing more research, Fred has learned that the land that is being lost forms a semicircle. This semicircle is part of a circle centered at (0,0), with the line that bisects the circle being the X axis. Locations below the X axis are in the water. The semicircle has an area of 0 at the beginning of year 1. (Semicircle illustrated in the Figure.)","The first line of input will be a positive integer indicating how many data sets will be included (N). Each of the next N lines will contain the X and Y Cartesian coordinates of the land Fred is considering. These will be floating point numbers measured in miles. The Y coordinate will be non-negative. (0,0) will not be given.","For each data set, a single line of output should appear. This line should take the form of: “Property N: This property will begin eroding in year Z.” Where N is the data set (counting from 1), and Z is the first year (start from 1) this property will be within the semicircle AT THE END OF YEAR Z. Z must be an integer. After the last data set, this should print out “END OF OUTPUT.” ","2
+1.0 1.0
+25.0 0.0","Property 1: This property will begin eroding in year 1.
+Property 2: This property will begin eroding in year 20.
+END OF OUTPUT."
+Financial Management,http://poj.org/problem?id=1004, 1000MS, 10000K,"Larry graduated this year and finally has a job. He's making a lot of money, but somehow never seems to have enough. Larry has decided that he needs to grab hold of his financial portfolio and solve his financing problems. The first step is to figure out what's been going on with his money. Larry has his bank account statements and wants to see how much money he has. Help Larry by writing a program to take his closing balance from each of the past twelve months and calculate his average account balance. ",The input will be twelve lines. Each line will contain the closing balance of his bank account for a particular month. Each number will be positive and displayed to the penny. No dollar sign will be included. ,"The output will be a single number, the average (mean) of the closing balances for the twelve months. It will be rounded to the nearest penny, preceded immediately by a dollar sign, and followed by the end-of-line. There will be no other spaces or characters in the output. ","100.00
+489.12
+12454.12
+1234.10
+823.05
+109.20
+5.27
+1542.25
+839.18
+83.99
+1295.01
+1.75",$1581.42
+Hangover,http://poj.org/problem?id=1003, 1000MS, 10000K,"How far can you make a stack of cards overhang a table? If you have one card, you can create a maximum overhang of half a card length. (We're assuming that the cards must be perpendicular to the table.) With two cards you can make the top card overhang the bottom one by half a card length, and the bottom one overhang the table by a third of a card length, for a total maximum overhang of 1/2 + 1/3 = 5/6 card lengths. In general you can make n cards overhang by 1/2 + 1/3 + 1/4 + ... + 1/(n + 1) card lengths, where the top card overhangs the second by 1/2, the second overhangs tha third by 1/3, the third overhangs the fourth by 1/4, etc., and the bottom card overhangs the table by 1/(n + 1). This is illustrated in the figure below.","The input consists of one or more test cases, followed by a line containing the number 0.00 that signals the end of the input. Each test case is a single line containing a positive floating-point number c whose value is at least 0.01 and at most 5.20; c will contain exactly three digits.","For each test case, output the minimum number of cards necessary to achieve an overhang of at least c card lengths. Use the exact output format shown in the examples.","1.00
+3.71
+0.04
+5.19
+0.00
+","3 card(s)
+61 card(s)
+1 card(s)
+273 card(s)"
+487-3279,http://poj.org/problem?id=1002, 2000MS, 65536K,"Businesses like to have memorable telephone numbers. One way to make a telephone number memorable is to have it spell a memorable word or phrase. For example, you can call the University of Waterloo by dialing the memorable TUT-GLOP. Sometimes only part of the number is used to spell a word. When you get back to your hotel tonight you can order a pizza from Gino's by dialing 310-GINO. Another way to make a telephone number memorable is to group the digits in a memorable way. You could order your pizza from Pizza Hut by calling their ``three tens'' number 3-10-10-10.The standard form of a telephone number is seven decimal digits with a hyphen between the third and fourth digits (e.g. 888-1200). The keypad of a phone supplies the mapping of letters to numbers, as follows:A, B, and C map to 2D, E, and F map to 3G, H, and I map to 4J, K, and L map to 5M, N, and O map to 6P, R, and S map to 7T, U, and V map to 8W, X, and Y map to 9There is no mapping for Q or Z. Hyphens are not dialed, and can be added and removed as necessary. The standard form of TUT-GLOP is 888-4567, the standard form of 310-GINO is 310-4466, and the standard form of 3-10-10-10 is 310-1010.Two telephone numbers are equivalent if they have the same standard form. (They dial the same number.)Your company is compiling a directory of telephone numbers from local businesses. As part of the quality control process you want to check that no two (or more) businesses in the directory have the same telephone number.","The input will consist of one case. The first line of the input specifies the number of telephone numbers in the directory (up to 100,000) as a positive integer alone on the line. The remaining lines list the telephone numbers in the directory, with each number alone on a line. Each telephone number consists of a string composed of decimal digits, uppercase letters (excluding Q and Z) and hyphens. Exactly seven of the characters in the string will be digits or letters.","Generate a line of output for each telephone number that appears more than once in any form. The line should give the telephone number in standard form, followed by a space, followed by the number of times the telephone number appears in the directory. Arrange the output lines by telephone number in ascending lexicographical order. If there are no duplicates in the input print the line:No duplicates.","12
+4873279
+ITS-EASY
+888-4567
+3-10-10-10
+888-GLOP
+TUT-GLOP
+967-11-11
+310-GINO
+F101010
+888-1200
+-4-8-7-3-2-7-9-
+487-3279
+","310-1010 2
+487-3279 4
+888-4567 3"
+Exponentiation,http://poj.org/problem?id=1001, 500MS, 10000K,"Problems involving the computation of exact values of very large magnitude and precision are common. For example, the computation of the national debt is a taxing experience for many computer systems. This problem requires that you write a program to compute the exact value of Rn where R is a real number ( 0.0 InputThe input will consist of a set of pairs of values for R and n. The R value will occupy columns 1 through 6, and the n value will be in columns 8 and 9.OutputThe output will consist of one line for each line of input giving the exact value of R^n. Leading zeros should be suppressed in the output. Insignificant trailing zeros must not be printed. Don't print the decimal point if the result is an integer.Sample Input95.123 12
+0.4321 20
+5.1234 15
+6.7592  9
+98.999 10
+1.0100 12
+Sample Output548815620517731830194541.899025343415715973535967221869852721
+.00000005148554641076956121994511276767154838481760200726351203835429763013462401
+43992025569.928573701266488041146654993318703707511666295476720493953024
+29448126.764121021618164430206909037173276672
+90429072743629540498.107596019456651774561044010001
+1.126825030131969720661201HintIf you don't know how to determine wheather encounted the end of input:s is a string and n is an integerC++while(cin>>s>>n){...}cwhile(scanf(""%s%d"",s,&n)==2) //to  see if the scanf read in as many items as you want/*while(scanf(%s%d"",s,&n)!=EOF) //this also work    */{...}SourceEast Central North America 1988","The input will consist of a set of pairs of values for R and n. The R value will occupy columns 1 through 6, and the n value will be in columns 8 and 9.",The output will consist of one line for each line of input giving the exact value of R^n. Leading zeros should be suppressed in the output. Insignificant trailing zeros must not be printed. Don't print the decimal point if the result is an integer.,"95.123 12
+0.4321 20
+5.1234 15
+6.7592  9
+98.999 10
+1.0100 12
+","548815620517731830194541.899025343415715973535967221869852721
+.00000005148554641076956121994511276767154838481760200726351203835429763013462401
+43992025569.928573701266488041146654993318703707511666295476720493953024
+29448126.764121021618164430206909037173276672
+90429072743629540498.107596019456651774561044010001
+1.126825030131969720661201"

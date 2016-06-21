@@ -9,7 +9,10 @@ from scrapy.selector import Selector
 class PojSpider(Spider):
     name='poj'
     allowed_domains=['poj.org']
-    start_urls=['http://poj.org/problemlist?volume=1']
+    start_urls=[]
+    for i in range(1,5,1):
+        start_urls.append('http://poj.org/problemlist?volume=%d'% i)
+    #start_urls=['http://poj.org/problemlist?volume=2']
    # def start_requests(self):
    #     headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36'}
    #     print 'here'*10
